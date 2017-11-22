@@ -1,0 +1,44 @@
+{
+  "name": "@crowdanalyzer/places",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "author": "CrowdAnalyzer <dev@crowdanalyzer.com>",
+  "description": "Get The gender of certain name via GenderApi and fullcontact API(s)",
+  "repository": {
+    "type": "git",
+    "url": "..."
+  },
+  "engine": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  },
+  "contributors": [
+    {
+      "name": "Ali Abdelaal <aliabdelaal>",
+      "email": "aliabdelaal369@gmail.com"
+    }
+  ],
+  "main": "./index",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test/ --recursive --timeout=60000",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- ./test/ --recursive --timeout=60000",
+    "lint": "./node_modules/.bin/eslint ./src/ ./test/ ./index.js; exit 0;",
+    "docker": "docker build --no-cache -t places:$npm_package_version --build-arg NPM_TOKEN=$NPM_TOKEN . && docker run places:$npm_package_version"
+  },
+  "devDependencies": {
+    "@crowdanalyzer/schema-tester": "^1.4.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0 ",
+    "chai-subset": "^1.5.0",
+    "eslint": "^3.5.0",
+    "eslint-config-crowdanalyzer": "^1.2.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "@crowdanalyzer/validator": "^2.2.0",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  }
+}
