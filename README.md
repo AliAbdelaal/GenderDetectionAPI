@@ -13,7 +13,7 @@ you need to run ```npm install``` to load all the project libs
 
 demo example
 
-```nodejs
+```javascript
 
 const config = require('path/to/conif');
 const Gender = require('./src/Gender');
